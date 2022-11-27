@@ -1,12 +1,12 @@
-import { Box } from "rebass/styled-components";
+import { Box } from 'rebass/styled-components';
 
 export const Container = ({ children }) => {
   return (
     <Box
       sx={{
-        width: "100%",
+        width: '100%',
         maxWidth: 1024,
-        mx: "auto",
+        mx: 'auto',
       }}
     >
       {children}
