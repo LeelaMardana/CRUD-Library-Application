@@ -1,4 +1,4 @@
-# React Query 3 - CRUD Tutorial
+#CRUD Tutorial
 
 You need to launch client and server separately.
 
