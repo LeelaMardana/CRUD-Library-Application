@@ -18,7 +18,7 @@ export const BooksList = () => {
   }
 
   if (isError) {
-    return <span> Ошибка - нет Ответа от сервера</span>;
+    return <span>Error: {error.message}</span>;
   }
 
   return (

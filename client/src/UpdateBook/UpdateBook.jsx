@@ -24,7 +24,7 @@ export const UpdateBook = () => {
     return (
       <Container>
         <Flex py={5} justifyContent='center'>
-          <BallTriangle color='black' height={70} width={70} />
+          <BallTriangle color='#0077CC' height={70} width={70} />
         </Flex>
       </Container>
     );

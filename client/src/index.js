@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import 'react-loader-spinner/dist/loader/Audio';
 import App from './App';
 import { ThemeProvider } from 'styled-components';
 import { QueryClientProvider, QueryClient } from 'react-query';

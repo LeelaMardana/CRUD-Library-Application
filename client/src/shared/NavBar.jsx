@@ -11,7 +11,7 @@ export const NavBar = () => {
   `;
 
   return (
-    <Flex bg={'black'} color='white' justifyContent='center'>
+    <Flex bg={'#1b1d1e'} color='white' justifyContent='center'>
       <Container>
         <Flex px={2} width='100%' alignItems='center'>
           <StyledLink as={RouterLinkStyled} variant='nav' to='/'>

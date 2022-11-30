@@ -20,9 +20,13 @@ export const BookForm = ({ defaultValues, onFormSubmit, isLoading }) => {
         <Label htmlFor='author'>Author</Label>
         <Input ref={register} id='author' name='author' type='text' />
       </Box>
-      <Button variant='primary' mr={2}>
-        {isLoading ? <BallTriangle color='#fff' height={10} /> : 'Submit'}
-      </Button>
+      {isLoading ? (
+        <BallTriangle color='#0077CC' height={30} />
+      ) : (
+        <Button variant='primary' mr={2}>
+          Submit
+        </Button>
+      )}
     </form>
   );
 };
