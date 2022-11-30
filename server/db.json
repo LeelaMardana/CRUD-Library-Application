@@ -1,13 +1,8 @@
 {
   "books": [
     {
-      "id": "d5fE_asz",
-      "title": "The New Turing Omnibus",
-      "author": "Alexander K. Dewdney"
-    },
-    {
       "id": "iEuOBYkU",
-      "title": "The Little Book of Semaphores",
+      "title": "The Little Book of Semaphores 123456",
       "author": "Allen B. Downey "
     },
     {
@@ -19,11 +14,6 @@
       "id": "OPhMogym",
       "title": "The Little Schemer",
       "author": "Daniel P. Friedman and Matthias Felleisen"
-    },
-    {
-      "id": "ukjXyUuM",
-      "title": "The Elements of Programming Style",
-      "author": "Brian W. Kernighan and Phillip J. Plauger"
     }
   ]
 }
