@@ -7,7 +7,7 @@ import {
 import { Link as RouterLink } from 'react-router-dom';
 import { useMutation, useQueryClient } from 'react-query';
 import { removeBook } from '../api';
-import { BallTriangle } from 'react-loader-spinner';
+import { ThreeDots } from 'react-loader-spinner';
 
 export const BookItem = ({ id, title, author }) => {
   const queryClient = useQueryClient();
@@ -26,7 +26,7 @@ export const BookItem = ({ id, title, author }) => {
       <Text>{author}</Text>
       <Button onClick={remove} ml='5'>
         {isLoading ? (
-          <BallTriangle color='#FF4154' height={50} width={50} />
+          <ThreeDots color='#fff311' height={20} width={50} />
         ) : (
           'Remove'
         )}
