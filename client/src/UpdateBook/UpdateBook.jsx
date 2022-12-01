@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { getBook, updateBook } from '../api';
 import { useQuery, useMutation } from 'react-query';
 import { BookForm, Container } from '../shared';
@@ -7,7 +7,7 @@ import { BallTriangle } from 'react-loader-spinner';
 
 export const UpdateBook = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
+  const history = useHistory();
   const { data, error, isLoading, isError } = useQuery(
     ['book', { id }],
     getBook
@@ -17,7 +17,7 @@ export const UpdateBook = () => {
 
   const onFormSubmit = async formData => {
     await mutateAsync({ ...formData, id });
-    navigate('/');
+    history.push('/');
   };
 
   if (isLoading) {

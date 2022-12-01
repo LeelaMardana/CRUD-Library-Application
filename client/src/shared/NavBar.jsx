@@ -16,7 +16,7 @@ export const NavBar = () => {
         <Flex px={2} width='100%' alignItems='center'>
           <StyledLink as={RouterLinkStyled} variant='nav' to='/'>
             <Image size={50} src={logo} mr={2} />
-            React Query CRUD
+            CRUD-Library-Application
           </StyledLink>
 
           <Box mx='auto' my={4} />

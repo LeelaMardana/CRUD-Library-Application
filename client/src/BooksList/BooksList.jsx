@@ -11,7 +11,7 @@ export const BooksList = () => {
     return (
       <Container>
         <Flex py='5' justifyContent='center'>
-          <BallTriangle color='#FF4154' height={50} width={50} />
+          <BallTriangle color='#0077CC' height={70} width={70} />
         </Flex>
       </Container>
     );

@@ -1,17 +1,17 @@
-import { BookForm, Container } from '../shared'
-import { Box, Heading } from 'rebass/styled-components'
-import { createBook } from '../api'
-import { useNavigate } from 'react-router-dom'
-import { useMutation } from 'react-query'
+import { BookForm, Container } from '../shared';
+import { Box, Heading } from 'rebass/styled-components';
+import { createBook } from '../api';
+import { useMutation } from 'react-query';
+import { useHistory } from 'react-router-dom';
 
 export const CreateBook = () => {
-  const navigate = useNavigate()
-  const { mutateAsync, isLoading } = useMutation(createBook)
+  const history = useHistory();
+  const { mutateAsync, isLoading } = useMutation(createBook);
 
-  const onFormSubmit = async (data) => {
-    await mutateAsync(data)
-    navigate('/')
-  }
+  const onFormSubmit = async data => {
+    await mutateAsync({ ...data });
+    history.push('/');
+  };
 
   return (
     <Container>
@@ -20,5 +20,5 @@ export const CreateBook = () => {
         <BookForm onFormSubmit={onFormSubmit} isLoading={isLoading} />
       </Box>
     </Container>
-  )
-}
+  );
+};
