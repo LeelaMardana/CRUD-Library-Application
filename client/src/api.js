@@ -79,59 +79,37 @@ import axios from 'axios';
 
 // API with Axios
 export const getAllBooks = async () => {
-  try {
-    const response = await axios.get(
-      `${process.env.REACT_APP_API_SERVER}/books`
-    );
-    const data = response.data;
-    return data;
-  } catch (error) {
-    console.error(error);
-  }
+  const response = await axios.get(`${process.env.REACT_APP_API_SERVER}/books`);
+  return response.data;
 };
 
 export const getBook = async ({ queryKey }) => {
   /* eslint-disable no-unused-vars */
   const [_key, { id }] = queryKey;
-  try {
-    const response = await axios.get(
-      `${process.env.REACT_APP_API_SERVER}/books/${id}`
-    );
-    return response.data;
-  } catch (error) {
-    console.error(error);
-  }
+
+  const response = await axios.get(
+    `${process.env.REACT_APP_API_SERVER}/books/${id}`
+  );
+  return response.data;
 };
 
 export const updateBook = async ({ id, ...data }) => {
-  try {
-    const response = await axios.put(
-      `${process.env.REACT_APP_API_SERVER}/books/${id}`,
-      data
-    );
-    return response.data;
-  } catch (error) {
-    console.error(error);
-  }
+  const response = await axios.put(
+    `${process.env.REACT_APP_API_SERVER}/books/${id}`,
+    data
+  );
+  return response.data;
 };
 
 export const removeBook = async id => {
-  try {
-    await axios.delete(`${process.env.REACT_APP_API_SERVER}/books/${id}`);
-    return true;
-  } catch (error) {
-    console.error(error);
-  }
+  await axios.delete(`${process.env.REACT_APP_API_SERVER}/books/${id}`);
+  return true;
 };
 
 export const createBook = async data => {
-  try {
-    const response = await axios.post(
-      `${process.env.REACT_APP_API_SERVER}/books/`,
-      data
-    );
-    return response.data;
-  } catch (error) {
-    console.error(error);
-  }
+  const response = await axios.post(
+    `${process.env.REACT_APP_API_SERVER}/books/`,
+    data
+  );
+  return response.data;
 };

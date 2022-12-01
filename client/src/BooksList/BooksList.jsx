@@ -11,14 +11,14 @@ export const BooksList = () => {
     return (
       <Container>
         <Flex py='5' justifyContent='center'>
-          <BallTriangle color='#0077CC' height={70} width={70} />
+          <BallTriangle radius={5} color='#0077CC' height={70} width={70} />
         </Flex>
       </Container>
     );
   }
 
   if (isError) {
-    return <span>Error: {error.message}</span>;
+    return <span>Ошибка: {error.message}</span>;
   }
 
   return (
